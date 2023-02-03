@@ -1,0 +1,33 @@
+plugins {
+    // Checker Framework pluggable type-checking
+    
+    id 'application'
+    id 'org.checkerframework' version '0.6.23'
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+application {
+    mainClass = 'testArray.App'
+}
+
+apply plugin: 'org.checkerframework'
+
+checkerFramework {
+  checkers = [
+    'org.checkerframework.checker.signedness.SignednessChecker'
+  ]
+}
+
+dependencies {
+  compileOnly 'org.checkerframework:checker-qual:3.30.1-SNAPSHOT'
+  testCompileOnly 'org.checkerframework:checker-qual:3.30.1-SNAPSHOT'
+  checkerFramework 'org.checkerframework:checker:3.30.1-SNAPSHOT'
+}
+
+tasks.withType(JavaCompile) {
+    options.deprecation = true
+}
