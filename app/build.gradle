@@ -23,9 +23,9 @@ checkerFramework {
 }
 
 dependencies {
-  compileOnly 'org.checkerframework:checker-qual:3.30.1-SNAPSHOT'
-  testCompileOnly 'org.checkerframework:checker-qual:3.30.1-SNAPSHOT'
-  checkerFramework 'org.checkerframework:checker:3.30.1-SNAPSHOT'
+  compileOnly 'org.checkerframework:checker-qual:3.30.0'
+  testCompileOnly 'org.checkerframework:checker-qual:3.30.0'
+  checkerFramework 'org.checkerframework:checker:3.30.0'
 }
 
 tasks.withType(JavaCompile) {
