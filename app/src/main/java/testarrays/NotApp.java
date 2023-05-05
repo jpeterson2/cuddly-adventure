@@ -7,7 +7,7 @@ import java.util.Arrays;
 import org.checkerframework.checker.signedness.qual.Unsigned;
 import org.checkerframework.checker.signedness.qual.Signed;
 
-public class NotApp<N> {
+public class NotApp<N extends @Signed Object> {
 
     public String doToString(N n) {
       return n.toString();
