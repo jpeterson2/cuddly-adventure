@@ -11,7 +11,9 @@ public class App {
 
     public static void main(String[] args) {
       NotApp<String> nas = new NotApp<>();
+      AlsoNotApp<Integer> anai = new AlsoNotApp<>();
       System.out.println(nas.doToString("hi"));
+      System.out.println(anai.doToString(1));
     }
 
 
