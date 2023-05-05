@@ -7,11 +7,10 @@ import java.util.Arrays;
 import org.checkerframework.checker.signedness.qual.Unsigned;
 import org.checkerframework.checker.signedness.qual.Signed;
 
-public class App {
+public class NotApp<N> {
 
-    public static void main(String[] args) {
-      NotApp<String> nas = new NotApp<>();
-      System.out.println(nas.doToString("hi"));
+    public String doToString(N n) {
+      return n.toString();
     }
 
 
