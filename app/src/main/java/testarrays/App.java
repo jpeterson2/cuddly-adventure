@@ -3,17 +3,19 @@
  */
 package testarrays;
 
-import java.util.Arrays;
 import org.checkerframework.checker.signedness.qual.Unsigned;
 import org.checkerframework.checker.signedness.qual.Signed;
 
 public class App {
 
     public static void main(String[] args) {
-      NotApp<String> nas = new NotApp<>();
-      AlsoNotApp<Integer> anai = new AlsoNotApp<>();
-      System.out.println(nas.doToString("hi"));
-      System.out.println(anai.doToString(1));
+        @Unsigned int x = -1;
+        String s = "foo";
+        String t = s+x;
+        String u = s+Integer.toUnsignedString(x);
+        System.out.println(s);
+        System.out.println(t);
+        System.out.println(u);
     }
 
 
