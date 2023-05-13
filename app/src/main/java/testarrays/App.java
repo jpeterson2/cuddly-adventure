@@ -9,7 +9,7 @@ import org.checkerframework.checker.signedness.qual.Signed;
 public class App {
 
     public static void main(String[] args) {
-        @Unsigned int x = 2;
+        @Unsigned int x = -1;
         String s = "foo";
         String t = s+x;
         String u = s+Integer.toUnsignedString(x);
